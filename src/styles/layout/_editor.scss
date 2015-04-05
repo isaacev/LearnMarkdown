@@ -1,0 +1,153 @@
+// src/styles/layout/editor.scss
+
+.editor {
+	$dim-editor-height: 256px;
+	$dim-control-height: 56px;
+	$dim-major-border-width: 2px;
+	$dim-minor-border-width: 1px;
+
+	width: -webkit-calc(100% - 2 * $dim-major-border-width);
+	height: $dim-editor-height;
+	margin: 32px 0;
+	position: relative;
+	border-radius: 8px;
+	border: 2px solid $color-silver;
+	background-color: $color-clouds;
+	overflow: hidden;
+
+	[class^="view-"] {
+		width: 100%;
+		height: -webkit-calc(100% - #{$dim-control-height} - #{$dim-minor-border-width});
+	}
+
+	.view-editor {
+		.CodeMirror {
+			height: 100%;
+			background: none;
+			font-family: $font-code;
+			color: $color-midnight-blue;
+		}
+
+		.CodeMirror-lines {
+			padding: 16px 16px 16px 0;
+		}
+
+		.CodeMirror-gutters {
+			border-style: none !important;
+			background: none;
+		}
+
+		.CodeMirror-linenumber {
+			height: 20px;
+			padding-right: 12px;
+			font-size: 13px;
+			line-height: 20px;
+			color: $color-silver;
+		}
+
+		.CodeMirror-selected,
+		.CodeMirror-focused .CodeMirror-selected,
+		.CodeMirror ::selection {
+			background-color: transparentize($color-peter-river, 0.7);
+		}
+	}
+
+	.view-viewer {
+		font-family: $font-body;
+		overflow-y: scroll;
+
+		h1, h2, h3, h4, h5, h6, p, code {
+			margin: 16px;
+		}
+
+		h1 {
+			font-size: 2em;
+		}
+
+		h2 {
+			font-size: 1.5em;
+		}
+
+		h3 {
+			font-size: 1.2em;
+		}
+
+		h4 {
+			font-size: 1em;
+		}
+
+		h5 {
+			font-size: 0.8em
+		}
+
+		h6 {
+			font-size: 0.7em;
+		}
+	}
+
+	.controls {
+		width: 100%;
+		height: $dim-control-height;
+		position: absolute;
+		bottom: 0;
+		border-top: $dim-minor-border-width solid $color-silver;
+		background-color: white;
+		overflow: hidden;
+		user-select: none;
+
+		.button {
+			$img-sprite-cell-width: 64px;
+			$img-sprite-cell-height: 56px;
+
+			width: $dim-control-height + 8px;
+			height: $dim-control-height;
+			border-style: none;
+			float: left;
+			border-right: $dim-minor-border-width solid $color-silver;
+			background-color: white;
+			color: $color-asbestos;
+			background-image: url("../images/sprite.png");
+			cursor: pointer;
+
+			&:focus {
+				outline: none;
+			}
+
+			&.active {
+				background-color: $color-clouds;
+			}
+
+			&.markdownMode {
+				background-position-x: -$img-sprite-cell-width;
+				background-position-y: 0;
+			}
+
+			&.viewMode {
+				background-position-x: -$img-sprite-cell-width;
+				background-position-y: -$img-sprite-cell-height;
+			}
+
+			&.active.markdownMode {
+				background-position-x: 0;
+				background-position-y: 0;
+			}
+
+			&.active.viewMode {
+				background-position-x: 0;
+				background-position-y: -$img-sprite-cell-height;
+			}
+		}
+
+		.indicator {
+			$dim-height: 18px;
+
+			height: $dim-height;
+			margin: (($dim-control-height - $dim-height) / 2) 16px 0 0;
+			float: right;
+			font-size: 14px;
+			line-height: 18px;
+			font-family: $font-body;
+			color: $color-silver;
+		}
+	}
+}

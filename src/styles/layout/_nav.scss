@@ -1,0 +1,38 @@
+// src/styles/layout/nav.scss
+
+nav {
+	width: 100%;
+	height: $dim-nav-height;
+	border-bottom: 1px solid $color-silver;
+
+	svg {
+		display: block;
+		margin: 0 auto;
+
+		line {
+			&[completed="true"] {
+				stroke: $color-asbestos;
+			}
+
+			&[completed="false"] {
+				stroke: $color-silver;
+			}
+		}
+
+		circle {
+			cursor: pointer;
+
+			&[completed="true"] {
+				fill: $color-asbestos;
+			}
+
+			&[completed="false"] {
+				fill: $color-silver;
+			}
+		}
+	}
+
+	.tooltip {
+		background: #34495e;
+	}
+}
