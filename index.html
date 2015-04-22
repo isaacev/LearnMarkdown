@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Learning Markdown</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="static/styles/main.css">
+		<link rel="stylesheet" type="text/css" href="components/codemirror/lib/codemirror.css">
+	</head>
+	<body>
+		<main>
+<article class="lesson">				<h1 id="learn-markdown">Got 15 minutes? Let's learn Markdown</h1>
+				<p>Markdown is a way of using normal punctuation symbols to format plain text (like adding bold, italics, lists, etc). This tutorial is meant for anyone who is wondering what Markdown is and how to write it properly. <strong>No prior experience required.</strong></p>
+<p>Too easy? Feel free to skip to the more <a href="#advanced">advanced lessons</a>.</p>
+
+</article><hr><article class="lesson">				<h1 id="paragraphs"><span class="lesson-number">Lesson 1:</span> Paragraphs<a class="anchor-link" href="#paragraphs" title="Link to this lesson">#</a></h1>
+				<p>In Markdown, the simplest element is the paragraph.</p>
+<p>A paragraph is a block of text separated by at least <strong>one empty line</strong> above and below. Text without an empty line between them will be merged into a single paragraph.</p>
+<p><em>Tip: switch between <strong>edit</strong> and <strong>view</strong> modes to observe how Markdown is rendered</em></p>
+<pre><code class="lang-markdown">The first paragraph. A paragraph can be as long or as short as needed.
+
+The second paragraph.
+Even though this text is on the next line, it will be merged into the second paragraph.
+</code></pre>
+
+</article><hr><article class="lesson">				<h1 id="headers"><span class="lesson-number">Lesson 2:</span> Headers<a class="anchor-link" href="#headers" title="Link to this lesson">#</a></h1>
+				<p>Sometimes paragraphs aren&#39;t enough and it&#39;s important to have some headers. Headers are single lines of text that are rendered larger and more boldly than normal text.</p>
+<p>Headers can be written in two ways: with <strong>hashes</strong> or <strong>underlines</strong>.</p>
+<h3 id="hashes">Hashes</h3>
+<p>One or more hashes are added at the start of a line of text to make it a header. The hash symbols are not rendered, only the text. One hash creates the largest header, two hashes the second largest, etc. The smallest header can have six hashes. Seven or more hashes will not make the header any smaller.</p>
+<p>Optionally, this style of header can be closed with hashes. Closing the header has no effect outside of appearance. The number of closing hashes does not need to match the number of opening hashes.</p>
+<!-- ```technical
+The size of the header corresponds to the HTML tag used to render the Markdown. For example, `#` corresponds to the `<h1>` tag and `######` generates a `<h6>` tag
+``` -->
+<pre><code class="lang-markdown"># The first (and largest) header
+
+## The second header with optional closing hashes ###
+
+...
+
+###### The sixth (and smallest) header
+</code></pre>
+<h3 id="underlines">Underlines</h3>
+<p>Underlined headers only come in two sizes: the largest header (equivalent to <code>#</code>) and the second largest header (equivalent to <code>##</code>). Underlines are created by adding at least three <code>=</code> or <code>-</code> symbols below the header text. More than three symbols do not make a difference but may be added for aesthetic reasons.</p>
+<pre><code class="lang-markdown">This is the largest header
+==========================
+
+And this is the smaller header
+---
+</code></pre>
+
+</article><hr><article class="lesson">				<h1 id="bold-and-italic-text"><span class="lesson-number">Lesson 3:</span> Bold and Italic Text<a class="anchor-link" href="#bold-and-italic-text" title="Link to this lesson">#</a></h1>
+				<p>Sometimes, the emphasis of a word or phrase needs to be changed. For these times Markdown has <strong>bold</strong> and <strong>italic</strong> formatting.</p>
+<p><em>Note: Since both bold and italic text are used to modify formatting inside other elements such as headers and paragraphs, they are said to be <strong>span elements</strong></em></p>
+<h3 id="italic-text">Italic text</h3>
+<p>Text can be italicized using either pairs of <strong>single asterisks</strong> or <strong>single underscores</strong>. Insert an asterisk or an underscore on either side of whichever text should be emphasized. Precisely which symbol is used does not effect the rendered output.</p>
+<pre><code class="lang-markdown">*Everyone* should use emphasis _sometimes_.
+
+# Even *headers* can use more emphasis
+
+Be careful, symbols *can&#39;t_ be mixed
+</code></pre>
+<h3 id="bold-text">Bold text</h3>
+<p>Bold text can be formatted with either <strong>double asterisks</strong> or <strong>double underscores</strong>. Like with italic text, the symbol used is a matter of personal preference since the final output is the same.</p>
+<pre><code class="lang-markdown">Bold can be used to **highlight**.
+
+It&#39;s __not__ very subtle.
+
+Sometimes formatting needs to **_double up_**
+</code></pre>
+
+</article>		</main>
+
+		<script src="components/codemirror/lib/codemirror.js"></script>
+		<script src="components/jquery/dist/jquery.min.js"></script>
+		<script src="components/marked/lib/marked.js"></script>
+
+		<script src="static/scripts/editor.js"></script>
+	</body>
+</html>
