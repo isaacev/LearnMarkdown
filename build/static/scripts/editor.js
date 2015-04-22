@@ -44,7 +44,7 @@ function Editor(code) {
 
 var editors = [];
 
-var nodes = $('pre code.lang-editor');
+var nodes = $('pre code.lang-markdown');
 for (var i = 0; i < nodes.length; i++) {
 	var node = $(nodes[i]);
 	editors[i] = new Editor(node.text());

@@ -18,7 +18,7 @@ Optionally, this style of header can be closed with hashes. Closing the header h
 The size of the header corresponds to the HTML tag used to render the Markdown. For example, `#` corresponds to the `<h1>` tag and `######` generates a `<h6>` tag
 ``` -->
 
-```editor
+```markdown
 # The first (and largest) header
 
 ## The second header with optional closing hashes ###
@@ -32,7 +32,7 @@ The size of the header corresponds to the HTML tag used to render the Markdown. 
 
 Underlined headers only come in two sizes: the largest header (equivalent to `#`) and the second largest header (equivalent to `##`). Underlines are created by adding at least three `=` or `-` symbols below the header text. More than three symbols do not make a difference but may be added for aesthetic reasons.
 
-```editor
+```markdown
 This is the largest header
 ==========================
 

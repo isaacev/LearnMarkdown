@@ -10,7 +10,7 @@ A paragraph is a block of text separated by at least **one empty line** above an
 
 *Tip: switch between **edit** and **view** modes to observe how Markdown is rendered*
 
-```editor
+```markdown
 The first paragraph. A paragraph can be as long or as short as needed.
 
 The second paragraph.

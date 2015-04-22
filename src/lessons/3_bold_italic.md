@@ -12,7 +12,7 @@ Sometimes, the emphasis of a word or phrase needs to be changed. For these times
 
 Text can be italicized using either pairs of **single asterisks** or **single underscores**. Insert an asterisk or an underscore on either side of whichever text should be emphasized. Precisely which symbol is used does not effect the rendered output.
 
-```editor
+```markdown
 *Everyone* should use emphasis _sometimes_.
 
 # Even *headers* can use more emphasis
@@ -24,7 +24,7 @@ Be careful, symbols *can't_ be mixed
 
 Bold text can be formatted with either **double asterisks** or **double underscores**. Like with italic text, the symbol used is a matter of personal preference since the final output is the same.
 
-```editor
+```markdown
 Bold can be used to **highlight**.
 
 It's __not__ very subtle.
